@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELVET - Produit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo VELVET">
+                <h1>VELVET</h1>
+            </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index2.html">Catégories</a></li>
+                    <li><a href="index3.html" class="active">Produit</a></li>
+                    <li><a href="index4.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <div class="search-container">
+                    <a href="#" class="icon-link" tabindex="0">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input id="recherche-api" type="text" placeholder="Rechercher...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div id="resultats-api" class="search-results" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <a href="index4.html" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                
+                <a href="#" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="panier-info" aria-hidden="true">
+                    <span id="compteur-panier" style="display:none; background:#ff6b6b; color:white; padding:2px 6px; border-radius:12px; margin-left:6px; font-size:0.9rem;">0</span>
+                    <div id="total-panier" style="display:inline-block; margin-left:10px; font-size:0.9rem;"></div>
+                </div>
+                <div class="meteo-info" style="margin-left:12px; text-align:right;">
+                    <div id="meteo-info"></div>
+                    <div id="ip-info" style="font-size:0.85rem; color:#666"></div>
+                    <div id="heure-api" style="font-size:0.85rem; color:#666"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+       
+            <h1 class="title">Electronique</h1>
+            
+                    
+                <!-- Tableau Comparatif -->
+                <h1> Electronique</h1>
+            
+                <table class="velvet-table">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Image</th>
+                            <th>Caractéristiques</th>
+                            <th>Prix</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- iPhone 13 -->
+                        <tr>
+                            <td class="product-name">iPhone 13 Pro</td>
+                            <td class="product-image">
+                                <img src="iphone13.jpg" alt="iPhone 13 Pro">
+                            </td>
+                            <td class="product-specs">
+                                <ul>
+                                    <li><i class="fas fa-microchip velvet-icon"></i> Chip A15 Bionic</li>
+                                    <li><i class="fas fa-camera velvet-icon"></i> Triple caméra 12MP</li>
+                                    <li><i class="fas fa-tv velvet-icon"></i> Écran Super Retina XDR 120Hz</li>
+                                    <li><i class="fas fa-battery-full velvet-icon"></i> Autonomie 22h</li>
+                                </ul>
+                            </td>
+                            <td class="product-price">
+                                <span class="old-price">3 569 DNT</span>
+                                <span class="current-price">2 999 DNT</span>
+                            </td>
+                            <td class="product-link">
+                                <a href="https://www.apple.com/iphone/" target="_blank" class="velvet-btn">Apple <i class="fas fa-external-link-alt"></i></a>
+                                <button class="velvet-btn" onclick="ajouterProduitPanier(13, this);" aria-label="Acheter iPhone">Acheter</button>
+                            </td>
+                        </tr>
+                        
+                        <!-- Samsung S21 -->
+                        <tr>
+                            <td class="product-name">Samsung Galaxy S21 Ultra</td>
+                            <td class="product-image">
+                                <img src="s21-ultra.jpg" alt="Samsung S21 Ultra">
+                            </td>
+                            <td class="product-specs">
+                                <ul>
+                                    <li><i class="fas fa-microchip velvet-icon"></i> Exynos 2100</li>
+                                    <li><i class="fas fa-camera velvet-icon"></i> Caméra 108MP + zoom 10x</li>
+                                    <li><i class="fas fa-tv velvet-icon"></i> Écran AMOLED 120Hz</li>
+                                    <li><i class="fas fa-pen velvet-icon"></i> Compatible S Pen</li>
+                                </ul>
+                            </td>
+                            <td class="product-price">
+                                <span class="current-price">1 999 DNT</span>
+                            </td>
+                            <td class="product-link">
+                                <a href="https://www.samsung.com/galaxy/" target="_blank" class="velvet-btn">Samsung <i class="fas fa-external-link-alt"></i></a>
+                                <button class="velvet-btn" onclick="ajouterProduitPanier(21, this);" aria-label="Acheter Samsung">Acheter</button>
+                            </td>
+                        </tr>
+                        
+                        <!-- AirPods Max -->
+                        <tr>
+                            <td class="product-name">AirPods Max</td>
+                            <td class="product-image">
+                                <img src="airpods-max.jpg" alt="AirPods Max">
+                            </td>
+                            <td class="product-specs">
+                                <ul>
+                                    <li><i class="fas fa-headphones velvet-icon"></i> Réduction active du bruit</li>
+                                    <li><i class="fas fa-volume-up velvet-icon"></i> Qualité audio Hifi</li>
+                                    <li><i class="fas fa-clock velvet-icon"></i> 20h d'autonomie</li>
+                                    <li><i class="fas fa-snowflake velvet-icon"></i> Design aluminium</li>
+                                </ul>
+                            </td>
+                            <td class="product-price">
+                                <span class="current-price">1 500 DNT</span>
+                            </td>
+                            <td class="product-link">
+                                <a href="https://www.apple.com/airpods-max/" target="_blank" class="velvet-btn">Apple <i class="fas fa-external-link-alt"></i></a>
+                                <button class="velvet-btn" onclick="ajouterProduitPanier(101, this);" aria-label="Acheter AirPods Max">Acheter</button>
+                            </td>
+                        </tr>
+                        
+                        <!-- PS5 -->
+                        <tr>
+                            <td class="product-name">PlayStation 5</td>
+                            <td class="product-image">
+                                <img src="ps5.jpg" alt="PlayStation 5">
+                            </td>
+                            <td class="product-specs">
+                                <ul>
+                                    <li><i class="fas fa-microchip velvet-icon"></i> AMD Zen 2 8 cœurs</li>
+                                    <li><i class="fas fa-memory velvet-icon"></i> SSD 825GB ultra-rapide</li>
+                                    <li><i class="fas fa-gamepad velvet-icon"></i> DualSense haptique</li>
+                                    <li><i class="fas fa-tv velvet-icon"></i> 4K 120Hz</li>
+                                </ul>
+                            </td>
+                            <td class="product-price">
+                                <span class="current-price">1 700 DNT</span>
+                            </td>
+                            <td class="product-link">
+                                <a href="https://www.playstation.com/" target="_blank" class="velvet-btn">Sony <i class="fas fa-external-link-alt"></i></a>
+                                <button class="velvet-btn" onclick="ajouterProduitPanier(999, this);" aria-label="Acheter PS5">Acheter</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="new-arrivals">
+            <h1 class="title">Vêtements</h1>
+            <div class="product-grid">
+                <!-- Produit 1 - Robe Blanche/Rouge -->
+                <div class="product-item">
+                    <div class="new-in">NEW IN</div>
+                    <div class="image-slider">
+                        <input type="radio" name="slider1" id="slider1_1" checked>
+                        <input type="radio" name="slider1" id="slider1_2">
+                        
+                        <div class="slider-images">
+                            <label for="slider1_2" class="arrow left">&#10094;</label>
+                            <label for="slider1_1" class="arrow right">&#10095;</label>
+                            <img src="robe.jpg" alt="Robe blanche" class="slide img1">
+                            <img src="robe2.jpg" alt="Robe rouge" class="slide img2">
+                        </div>
+                    </div>
+                    <h3>Robe Élégante</h3>
+                    <div class="price">999,99 TND</div>
+                    <div class="reference">A24BSDM00</div>
+                    <button class="velvet-btn" onclick="ajouterProduitPanier(201, this);">Acheter</button>
+                    <div class="color-options">
+                        <label for="slider1_1" class="color-circle white selected"></label>
+                        <label for="slider1_2" class="color-circle red"></label>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 - T-shirt Beige/Noir -->
+                <div class="product-item">
+                    <div class="new-in">NEW IN</div>
+                    <div class="image-slider">
+                        <input type="radio" name="slider2" id="slider2_1" checked>
+                        <input type="radio" name="slider2" id="slider2_2">
+                        
+                        <div class="slider-images">
+                            <label for="slider2_2" class="arrow left">&#10094;</label>
+                            <label for="slider2_1" class="arrow right">&#10095;</label>
+                            <img src="tshirt.jpg" alt="T-shirt beige" class="slide img1">
+                            <img src="tshirt (2).jpg" alt="T-shirt noir" class="slide img2">
+                        </div>
+                    </div>
+                    <h3>T-shirt Casual</h3>
+                    <div class="price">89,99 TND</div>
+                    <div class="reference">A24BSDM02</div>
+                    <button class="velvet-btn" onclick="ajouterProduitPanier(202, this);">Acheter</button>
+                    <div class="color-options">
+                        <label for="slider2_1" class="color-circle beige selected"></label>
+                        <label for="slider2_2" class="color-circle black"></label>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 - Jupe Blanche/Noire -->
+                <div class="product-item">
+                    <div class="new-in">NEW IN</div>
+                    <div class="image-slider">
+                        <input type="radio" name="slider3" id="slider3_1" checked>
+                        <input type="radio" name="slider3" id="slider3_2">
+                        
+                        <div class="slider-images">
+                            <label for="slider3_2" class="arrow left">&#10094;</label>
+                            <label for="slider3_1" class="arrow right">&#10095;</label>
+                            <img src="jupe.jpg" alt="Jupe blanche" class="slide img1">
+                            <img src="jupe2 (1).jpg" alt="Jupe noire" class="slide img2">
+                        </div>
+                    </div>
+                    <h3>Jupe Mini</h3>
+                    <div class="price">129,99 TND</div>
+                    <div class="reference">A24BSDM34</div>
+                    <button class="velvet-btn" onclick="ajouterProduitPanier(203, this);">Acheter</button>
+                    <div class="color-options">
+                        <label for="slider3_1" class="color-circle white selected"></label>
+                        <label for="slider3_2" class="color-circle black"></label>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 - Pantalon Gris/Marron -->
+                <div class="product-item">
+                    <div class="new-in">NEW IN</div>
+                    <div class="image-slider">
+                        <input type="radio" name="slider4" id="slider4_1" checked>
+                        <input type="radio" name="slider4" id="slider4_2">
+                        
+                        <div class="slider-images">
+                            <label for="slider4_2" class="arrow left">&#10094;</label>
+                            <label for="slider4_1" class="arrow right">&#10095;</label>
+                            <img src="pontallon.jpg" alt="Pantalon gris" class="slide img1">
+                            <img src="pontallon2.jpg" alt="Pantalon marron" class="slide img2">
+                        </div>
+                    </div>
+                    <h3>Pantalon Classique</h3>
+                    <div class="price">89,99 TND</div>
+                    <div class="reference">A24BSDM22</div>
+                    <button class="velvet-btn" onclick="ajouterProduitPanier(204, this);">Acheter</button>
+                    <div class="color-options">
+                        <label for="slider4_1" class="color-circle gray selected"></label>
+                        <label for="slider4_2" class="color-circle brown"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="main-title">
+                <h1><i class="fas fa-utensils"></i> VELVET ALIMENTATION TUNISIE</h1>
+            </div>
+    
+            <!-- Navigation intégrée -->
+            <nav class="inline-nav">
+                <a href="#pizza" class="nav-link active"><i class="fas fa-pizza-slice"></i> Pizza</a>
+                <a href="#burger" class="nav-link"><i class="fas fa-hamburger"></i> Burger</a>
+            </nav>
+    
+            <!-- Section Pizza Tunisienne -->
+            <section id="pizza" class="food-section">
+                <div class="section-header">
+                    <h2>PIZZA TUNISIENNE <span class="tunisian-flag">🇹🇳</span></h2>
+                    <div class="price-tag">18.500 TND</div>
+                </div>
+                
+                <div class="video-container">
+                    <video controls poster="pizza.jpg">
+                        <source src="Epic B-Roll Style Pizza Commercial _ Instrumental Version.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas les vidéos HTML5.
+                    </video>
+                </div>
+                
+                <div class="food-description">
+                    <h3>Spécialité Maison</h3>
+                    <ul class="ingredients">
+                        <li><i class="fas fa-cheese"></i> Fromage bleu local</li>
+                        <li><i class="fas fa-pepper-hot"></i> Merguez maison</li>
+                        <li><i class="fas fa-fire"></i> Harissa fraîche</li>
+                        <li><i class="fas fa-olive"></i> Olives de Sfax</li>
+                    </ul>
+                    <a href="#commande" class="order-btn">Commander <i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </section>
+    
+            <!-- Section Burger Tunisien -->
+            <section id="burger" class="food-section">
+                <div class="section-header">
+                    <h2>BURGER TUNISIEN <span class="tunisian-flag">🇹🇳</span></h2>
+                    <div class="price-tag">15.900 TND</div>
+                </div>
+                
+                <div class="video-container">
+                    <video controls poster="burger.jpg">
+                        <source src="burger (2).mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas les vidéos HTML5.
+                    </video>
+                </div>
+                
+                <div class="food-description">
+                    <h3>Le Délice Tunisien</h3>
+                    <ul class="ingredients">
+                        <li><i class="fas fa-bread-slice"></i> Pain au cumin</li>
+                        <li><i class="fas fa-drumstick-bite"></i> Viande d'agneau</li>
+                        <li><i class="fas fa-cheese"></i> Fromage frais</li>
+                        <li><i class="fas fa-leaf"></i> Salade Mechouia</li>
+                    </ul>
+                    <a href="#commande" class="order-btn">Commander <i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </section>
+        <!-- decoration -->
+        <section class="decoration">
+            <h1>Maison</h1>
+            <div class="deco-list">
+                <div class="deco">
+                    <img src="deco1 (2).jpg" alt="Canapé moderne en tissu">
+                    <p>Canapé 3 places</p>
+                    <span>Canapé moderne en tissu résistant, idéal pour votre salon<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+                <div class="deco">
+                    <img src="deco4.png" alt="Table à manger extensible">
+                    <p>Table à manger</p>
+                    <span>Table en chêne massif avec rallonges, 6-8 personnes<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+                <div class="deco">
+                    <img src="deco5 (4).jfif" alt="Armoire de rangement">
+                    <p>Armoire 3 portes</p>
+                    <span>Armoire moderne avec portes coulissantes et étagères ajustables<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+                <div class="deco">
+                    <img src="deco5 (4).jpg" alt="Lit double avec tête de lit">
+                    <p>Lit queen size</p>
+                    <span>Lit en bois massif avec tête de lit rembourrée, matelas inclus<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+                <div class="deco">
+                    <img src="deco5 (7).jfif" alt="Bureau moderne">
+                    <p>Bureau design</p>
+                    <span>Bureau contemporain avec tiroirs et tablette pour ordinateur<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+                <div class="deco">
+                    <img src="deco5 (6).jfif" alt="Chaise de salle à manger">
+                    <p>Set de 6 chaises</p>
+                    <span>Chaises en bois et tissu, confortables et élégantes<br></span>
+                    <button class="orange_link">Acheter maintenant</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        
+        <div class="footer-content">
+            <h2 class="footer-title">Immobilier</h2>
+            <p class="footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cum.<br>Vero, explicabo illum. Repudiandae.</p>
+            <a href="index4.html" class="contact-button">Nous contacter</a>
+            <p class="copyright">VELVET ©2025 <strong>Conçu par Molka Zghal</strong></p>
+        </div>
+    
+   </footer>
+
+       
+</body>
+</html>
