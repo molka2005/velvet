@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELVET - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo VELVET">
+                <h1>VELVET</h1>
+            </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="index2.html">Catégories</a></li>
+                    <li><a href="index3.html">Produit</a></li>
+                    <li><a href="index4.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                <div class="search-container">
+                    <a href="#" class="icon-link" tabindex="0">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input id="recherche-api" type="text" placeholder="Rechercher...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div id="resultats-api" class="search-results" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <a href="#" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                
+                <a href="#" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="panier-info" aria-hidden="true">
+                    <span id="compteur-panier" style="display:none; background:#ff6b6b; color:white; padding:2px 6px; border-radius:12px; margin-left:6px; font-size:0.9rem;">0</span>
+                    <div id="total-panier" style="display:inline-block; margin-left:10px; font-size:0.9rem;"></div>
+                </div>
+                <div class="meteo-info" style="margin-left:12px; text-align:right;">
+                    <div id="meteo-info"></div>
+                    <div id="ip-info" style="font-size:0.85rem; color:#666"></div>
+                    <div id="heure-api" style="font-size:0.85rem; color:#666"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="contact">
+            <h1 class="title">Contactez-nous</h1>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2><i class="fas fa-map-marker-alt"></i> Adresse</h2>
+                    <p>Avenue Habib Bourguiba, Tunis</p>
+                    
+                    <h2><i class="fas fa-phone"></i> Téléphone</h2>
+                    <p>+216 70 123 456</p>
+                    
+                    <h2><i class="fas fa-envelope"></i> Email</h2>
+                    <p>contact@velvet.tn</p>
+                    
+                    <h2><i class="fas fa-clock"></i> Horaires</h2>
+                    <p>Lundi - Vendredi : 9h - 19h</p>
+                    <p>Samedi : 9h - 13h</p>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Formulaire de contact</h2>
+                    <form id="form-contact">
+                        <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+                        <input id="email" name="email" type="email" placeholder="Votre email" required>
+                        <input id="sujet" name="sujet" type="text" placeholder="Sujet">
+                        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                    <div id="confirmation" style="margin-top:8px; color:green;"></div>
+                </div>
+            </div>
+            
+            <div class="faq">
+                <h2>FAQ</h2>
+                <div class="faq-item">
+                    <h3>Quelle est votre politique de retour ?</h3>
+                    <p>Vous pouvez retourner les produits sous 14 jours après réception.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quels sont les modes de paiement acceptés ?</h3>
+                    <p>Nous acceptons les cartes bancaires, virements et paiements à la livraison.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+                <div class="footer-content">
+                    <h2 class="footer-title">Immobilier</h2>
+                    <p class="footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cum.<br>Vero, explicabo illum. Repudiandae.</p>
+                    <a href="index4.html" class="contact-button">Nous contacter</a>
+                    <p class="copyright">VELVET ©2025 <strong>Conçu par Molka Zghal</strong></p>
+                </div>
+           
+    
+    </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELVET - Catégories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo VELVET">
+                <h1>VELVET</h1>
+            </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index2.html" class="active">Catégories</a></li>
+                    <li><a href="index3.html">Produit</a></li>
+                    <li><a href="index4.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <div class="search-container">
+                    <a href="#" class="icon-link" tabindex="0">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input id="recherche-api" type="text" placeholder="Rechercher...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                        <div id="resultats-api" class="search-results" style="display:none;"></div>
+                    </div>
+                </div>
+                
+                <a href="index4.html" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                
+                <a href="#" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="panier-info" aria-hidden="true">
+                    <span id="compteur-panier" style="display:none; background:#ff6b6b; color:white; padding:2px 6px; border-radius:12px; margin-left:6px; font-size:0.9rem;">0</span>
+                    <div id="total-panier" style="display:inline-block; margin-left:10px; font-size:0.9rem;"></div>
+                </div>
+                <div class="meteo-info" style="margin-left:12px; text-align:right;">
+                    <div id="meteo-info"></div>
+                    <div id="ip-info" style="font-size:0.85rem; color:#666"></div>
+                    <div id="heure-api" style="font-size:0.85rem; color:#666"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="electronique" class="category-section">
+            <h1 class="title">Électronique</h1>
+            <div class="category-description">
+                <p>Découvrez notre sélection de produits électroniques high-tech aux meilleurs prix.</p>
+            </div>
+            <div class="best-sales__product">
+                <div class="div1">
+                    <img src="por.jpg" alt="Product image 1">
+                </div>
+                <div class="div2">
+                    <img src="pc.jpg" alt="Product image 2">
+                </div>
+                <div class="div3">
+                    <span>Nouveauté</span>
+                </div>
+                <div class="div4">
+                    <a href="https://www.apple.com/"><span>APPEL</span></a>
+                </div>
+                <div class="div5">
+                    <span>La tandance</span>
+                </div>
+                <div class="div6">
+                    <img src="air.jpg" alt="Product image 3">
+                </div>
+                <div class="div7">
+                    <span>Bonne écoute</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produits Populaires section removed -->
+
+        <!-- img section -->
+                <!-- home -->
+        <section class="home1">
+            <div class="left1">
+                <h1>Meilleur design d'intérieur pour votre maison</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing. Dolores reprehenderit nihil dolore vitae necessitatibus veniam voluptatibus asperiores quis cupiditate asperiores quis cupiditate asperiores quis cupiditate.</p>
+                <a href="index3.html" class="orange_link1">Découvrir</a>
+            </div>
+            <div class="right1">
+                <img src="img1.jpg">
+            </div>
+            <div class="statistiques">
+                <span>
+                    <h2>450+</h2>
+                    <p>projets terminés</p>
+                </span>
+                <span>
+                    <h2>120+</h2>
+                    <p>designers professionnels</p>
+                </span>
+                <span>
+                    <h2>160+</h2>
+                    <p>projets en cours</p>
+                </span>
+            </div>
+        </section>
+        <!-- citation -->
+        <!-- citation -->
+<!-- citation -->
+        
+            <div class="banner">
+                <h1>Quand l'estomac d'un homme est plein, <br> peu importe qu'il soit riche ou pauvre.</h1>
+                <p>La véritable satisfaction ne se mesure pas aux biens matériels mais aux besoins essentiels comblés.</p>
+                <p>Notre philosophie du design intérieur repose sur cette authenticité.</p>
+            </div>
+        
+<!-- citation -->
+        <section class="img-section">
+            <h1 class="title">Notre meilleur modèle</h1>
+            <div class="img-section_content">
+                <img src="img6.jpg" alt="Notre meilleure réalisation en design d'intérieur">
+                <p>Découvrez notre création exclusive alliant innovation et élégance. Un design sur-mesure qui sublime votre espace de vie avec des matériaux haut de gamme et une esthétique raffinée.</p>
+            </div>
+        </section>
+    </main> 
+        
+        <!-- home -->
+    <footer>
+        
+            <div class="footer-content">
+                <h2 class="footer-title">Immobilier</h2>
+                <p class="footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cum.<br>Vero, explicabo illum. Repudiandae.</p>
+                <a href="index4.html" class="contact-button">Nous contacter</a>
+                <p class="copyright">VELVET ©2025 <strong>Conçu par Molka Zghal</strong></p>
+            </div>
+        
+    </footer>   
+        
+</body>
+</html>
