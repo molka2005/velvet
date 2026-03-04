@@ -1775,4 +1775,5 @@ footer {
 .produit-api-img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; display:block; margin: 0 auto 8px; }
 .produit-api .api-price { font-weight:700; color: #333; }
 .utilisateurs-container { display: flex; gap: 12px; flex-wrap: wrap; }
-.client-card { background:#fff; padding:8px; border:1px solid #eee; display:flex; align-items:center; gap:8px; }
+.client-card { background:#fff; padding:8px; border:1px solid #eee; display:flex; align-items:center; gap:8px; }/ *   T E S T   H O T   R E L O A D   * /  
+ 
