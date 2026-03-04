@@ -1,0 +1,38 @@
+{
+  "site": {
+    "nom": "VELVET",
+    "slogan": "Votre shopping de luxe",
+    "annee": 2025
+  },
+  "categories": [
+    {
+      "id": 1,
+      "nom": "Électronique",
+      "icone": "fa-mobile-alt",
+      "description": "Produits high-tech dernier cri"
+    },
+    {
+      "id": 2,
+      "nom": "Vêtements",
+      "icone": "fa-tshirt",
+      "description": "Mode élégante et tendance"
+    },
+    {
+      "id": 3,
+      "nom": "Maison",
+      "icone": "fa-home",
+      "description": "Décoration et ameublement"
+    },
+    {
+      "id": 4,
+      "nom": "Alimentation",
+      "icone": "fa-utensils",
+      "description": "Spécialités tunisiennes"
+    }
+  ],
+  "contact": {
+    "adresse": "Avenue Habib Bourguiba, Tunis",
+    "telephone": "+216 70 123 456",
+    "email": "contact@velvet.tn"
+  }
+}
